@@ -116,8 +116,8 @@ public_users.get('/review/:isbn',function (req, res) {
     const reviews = book.reviews;
     if (Object.keys(reviews).length > 0) {
       return res.status(200).json(reviews);
-    } else {
-      return res.status(200).json({message: "No reviews yet for this book"});
+} else {
+      return res.status(404).json({message: "No reviews found for this book."});
     }
   } else {
     return res.status(404).json({message: "Book not found"});
