@@ -23,7 +23,7 @@ const getBooksByAuthorPromise = (author) => {
   });
 };
 
-// Helper function to get book by title using Axios with Promise
+// Helper function to get book by title using Axios with Promise.
 const getBooksByTitlePromise = (title) => {
   return new Promise((resolve, reject) => {
     axios.get('http://localhost:5000/title/' + title)
